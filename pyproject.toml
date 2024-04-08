@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pythonproject"
+description = ""
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.9"
+jupyter = "^1.0.0"
+torch = { version = "^2.2"}
+torchvision = { version = "^0.17"}
+scikit-image = { version = "^0.22"}
+matplotlib = "^3.8.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
