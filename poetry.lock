@@ -1597,6 +1597,20 @@ files = [
 traitlets = "*"
 
 [[package]]
+name = "mean-average-precision"
+version = "2024.1.5.0"
+description = "Mean Average Precision evaluator for object detection."
+optional = false
+python-versions = "*"
+files = [
+    {file = "mean_average_precision-2024.1.5.0-py3-none-any.whl", hash = "sha256:58f5de554eb63cbf9fd5102b20940960d1f3f6b388d25b9aec042c18dc0ff4f9"},
+]
+
+[package.dependencies]
+numpy = "*"
+pandas = "*"
+
+[[package]]
 name = "mistune"
 version = "3.0.2"
 description = "A sane and fast Markdown parser with useful plugins and renderers"
@@ -3488,4 +3502,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "92db8e43cf55476d5c028d7070eb03d2fcba5be71bf7f0f3b5a8c39e93854f15"
+content-hash = "08d1b4dc8090d2f4c6bb8ec47fd60f2c5e4eae27ae233378bb04f107010d22f2"

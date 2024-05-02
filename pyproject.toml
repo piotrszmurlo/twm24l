@@ -12,6 +12,7 @@ scikit-image = { version = "^0.22"}
 matplotlib = "^3.8.4"
 ultralytics = "^8.1.45"
 scikit-learn = "^1.4.2"
+mean-average-precision = "^2024.1.5.0"
 
 
 [build-system]
