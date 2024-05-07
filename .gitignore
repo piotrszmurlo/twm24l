@@ -1,6 +1,8 @@
-data
+datasets
+*dataset*
 .DS_Store
 .idea
 venv
 **.pickle
 **/__pycache__
+*.pth
