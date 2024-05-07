@@ -9,8 +9,9 @@ jupyter = "^1.0.0"
 torch = { version = "^2.2"}
 torchvision = { version = "^0.17"}
 scikit-image = { version = "^0.22"}
+scikit-learn = { version = "^1.4.2"}
+opencv-python = { version = "^4.9.0.80"}
 matplotlib = "^3.8.4"
-scikit-learn = "^1.4.2"
 mean-average-precision = "^2024.1.5.0"
 
 
