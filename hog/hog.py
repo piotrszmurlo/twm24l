@@ -44,7 +44,7 @@ def compute_hog_cell(
     for i in range(orientations.shape[0]):
         for j in range(orientations.shape[1]):
             orientation = orientations[i, j]
-            lower_bin_idx = int(orientation / bin_width)
+            lower_bin_idx = min(int(orientation / bin_width), n_orientations - 1)
             hog[lower_bin_idx] += magnitudes[i, j]
 
     return hog / (magnitudes.shape[0] * magnitudes.shape[1])
