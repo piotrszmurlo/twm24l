@@ -1,5 +1,6 @@
 from torch import Tensor, uint8
 import torch
+import torch.nn as nn
 
 
 def collate_fn(batch):
@@ -30,6 +31,7 @@ def train_one_epoch(model, optimizer, data_loader, epoch):
     print(f"-------------- EPOCH {epoch} ---------------")
     print(f'average bbox regression loss: {bbox_loss_sum / count}')
     print(f'average classification loss: {classification_loss_sum / count}')
+    return bbox_loss_sum / count, classification_loss_sum / count
 
 
 def rescale_image(image: Tensor):
@@ -49,4 +51,15 @@ def add_to_metric_fn(metric_fn, predictions, targets):
 
 def print_evaluation_metrics(metric_fn, iou_thresholds):
     for threshold in iou_thresholds:
-        print(f"mAP{int(threshold * 100)}: {metric_fn.value(iou_thresholds=threshold)['mAP']}")
+        print(f"test dataset mAP{int(threshold * 100)}: {metric_fn.value(iou_thresholds=threshold)['mAP']}")
+
+
+def freeze_backbone(backbone):
+    for param in backbone.parameters():
+        param.requires_grad = False
+
+def unfreeze_backbone(backbone):
+    for param in backbone.parameters():
+        param.requires_grad = True
+
+

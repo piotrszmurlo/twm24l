@@ -6,3 +6,4 @@ venv
 **.pickle
 **/__pycache__
 *.pth
+rescaled_data
